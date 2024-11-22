@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting Homepage</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="no sql & javascript/homepage.js" defer></script> <!-- Link to the JS script -->
+</head>
+<body>
+
+  <!-- Menu Bar -->
+  <div class="menu-bar">
+    <img src="create page img/menu.png" alt="Menu Icon" class="menu-icon" id="menu-icon" onclick="toggleDropdown()">
+    
+    <!-- Dropdown Menu -->
+    <div class="dropdown" id="dropdown">
+      <a href="my details.html">My Details</a>
+      <a href="help.html">Help</a>
+      <a href="signin.html">Sign Out</a>
+    </div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" class="search-input" placeholder="Search...">
+  </div>
+
+  <!-- Live Poll Section -->
+  <div class="live-poll">
+    <h3>Live Poll Percentage</h3>
+    <div id="poll-percentage">
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <!-- Countdown Timer -->
+  <div class="timer">
+    <h3>Time Remaining: <span id="countdown"></span></h3>
+  </div>
+
+  <!-- Candidates Section (2x2 Layout) -->
+  <div class="candidate-container">
+    <div class="candidate">
+      <img src="create page img/LA.jpg" alt="Lila Anderson">
+      <h2>Lila Anderson</h2>
+      <button class="vote-btn" onclick="showVoteConfirmation('Lila Anderson')">Vote</button>
+    </div>
+    <div class="candidate">
+      <img src="create page img/ZM.jpg" alt="Zoe Miller">
+      <h2>Zoe Miller</h2>
+      <button class="vote-btn" onclick="showVoteConfirmation('Zoe Miller')">Vote</button>
+    </div>
+    <div class="candidate">
+      <img src="create page img/EH.jpg" alt="Ethan Hayes">
+      <h2>Ethan Hayes</h2>
+      <button class="vote-btn" onclick="showVoteConfirmation('Ethan Hayes')">Vote</button>
+    </div>
+    <div class="candidate">
+      <img src="create page img/CC.jpg" alt="Caleb Carter">
+      <h2>Caleb Carter</h2>
+      <button class="vote-btn" onclick="showVoteConfirmation('Caleb Carter')">Vote</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 My Website</p>
+  </footer>
+
+  <!-- Modal for Vote Confirmation -->
+  <div id="vote-confirmation-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <p>Are you sure you want to vote for this candidate?</p>
+      <button class="confirm-btn" id="confirm-vote-btn">Yes</button>
+      <button class="no-btn" onclick="cancelVote()">No</button>
+    </div>
+  </div>
+  
+  <!-- Modal for Rating (Star Rating) -->
+  <div id="rating-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <p>Rate your voting experience:</p>
+      <div class="stars">
+        <span class="star" data-rating="1">★</span>
+        <span class="star" data-rating="2">★</span>
+        <span class="star" data-rating="3">★</span>
+        <span class="star" data-rating="4">★</span>
+        <span class="star" data-rating="5">★</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

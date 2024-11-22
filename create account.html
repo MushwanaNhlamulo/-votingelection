@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Burner with Affirmations and Messages -->
+    <div class="burner-container">
+        <div class="burner-content">
+            Vote for Change! | Stay Inspired! | You Can Do It! | Keep Pushing Forward! | Believe in Yourself! | Make Your Mark! | Never Give Up! | Achieve Greatness! | Dream Big!
+        </div>
+    </div>
+
+    <!-- Create Account Form -->
+    <div class="create-account-container">
+        <div class="form-container">
+            <h2>Create Account</h2>
+            <form id="create-account-form">
+                <!-- Name and Surname in one line -->
+                <div class="name-container">
+                    <input type="text" placeholder="First Name" id="first-name" required>
+                    <input type="text" placeholder="Surname" id="surname" required>
+                </div><br>
+
+                <input type="email" placeholder="Email" id="email" required><br>
+                
+                <select id="gender" required>
+                    <option value="">Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br>
+
+                <select id="province" required>
+                    <option value="">Province</option>
+                    <option value="gauteng">Gauteng</option>
+                    <option value="western-cape">Western Cape</option>
+                    <option value="eastern-cape">Eastern Cape</option>
+                    <option value="kwazulu-natal">KwaZulu-Natal</option>
+                    <option value="limpopo">Limpopo</option>
+                    <option value="mpumalanga">Mpumalanga</option>
+                    <option value="north-west">North West</option>
+                    <option value="free-state">Free State</option>
+                    <option value="northern-cape">Northern Cape</option>
+                </select><br>
+
+                <select id="race" required>
+                    <option value="">Race</option>
+                    <option value="caucasian">Caucasian</option>
+                    <option value="african">African</option>
+                    <option value="asian">Asian</option>
+                    <option value="hispanic">Hispanic</option>
+                    <option value="other">Other</option>
+                </select><br>
+
+                <input type="password" placeholder="Password" id="password" required><br>
+
+                <!-- Confirm Password with Hide/Show Feature -->
+                <div style="position: relative;">
+                    <input type="password" placeholder="Confirm Password" id="confirm-password" required>
+                    <span id="eye-icon" class="eye-icon open" onclick="togglePassword()">👁️</span>
+                </div><br>
+                
+                <button type="submit">Create Account</button>
+            </form>
+
+            <!-- Already Have Account Link -->
+            <a href="signin.html" class="already-have-account">Already have an account? Login here</a>
+        </div>
+    </div>
+ <!-- Link to Firebase SDK and the custom JS -->
+ <script type="module" src="no sql & javascript/create account.js"></script>
+</body>
+</html>

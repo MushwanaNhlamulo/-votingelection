@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Vote for Change</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Banner for Voting Inspiration -->
+  <div class="banner">
+    <div class="banner-text">
+      Your Voice Matters — Make It Count! | Vote for Change | Every Vote Shapes the Future
+    </div>
+  </div>
+
+  <!-- Sign In Form Container -->
+  <div class="signin-container">
+    <h1>Sign In</h1>
+    <h2>Welcome Back! Please Sign In to Continue</h2>
+    
+    <!-- Sign-In Form -->
+    <form id="signin-form">
+      <input type="email" id="email" class="input-field" placeholder="Email" required>
+      
+      <div class="password-container" style="position: relative;">
+        <input type="password" id="password" class="input-field" placeholder="Password" required>
+        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+      </div>
+      
+      <button type="submit" class="button">Sign In</button>
+    </form>
+    
+    <!-- Error/Success Message -->
+    <div id="message" class="message"></div>
+    
+    <a href="create account.html" class="create-account">Don't have an account? Create one</a>
+    <a href="forgot password.html" class="forgot-password">Forgot Password?</a>
+  </div>
+
+  <!-- Chatbot Button -->
+  <div class="chatbot-button" onclick="toggleChatWindow()">🤖</div>
+
+  <!-- Chat Window -->
+  <div id="chat-window" class="chat-window">
+    <header>Chat with Us</header>
+    <div id="chat-content" class="chat-content">
+      <p class="robot">Robot: How can I assist you today?</p>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 UCT, Created by Mushwana Nhlamulo</p>
+    <p>This website is not to be used for monetary gain. People and events depicted are fictional or parodies.</p>
+  </footer>
+
+  <!-- Firebase and Script Linkages -->
+  <script src="https://cdn.mailcheck.ai/mailcheck.min.js"></script> <!-- Mailcheck.ai Script -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script src="no sql & javascript/mailcheck.js"></script> <!-- Include mailcheck.js here -->
+  <script src="no sql & javascript/signin.js"></script>
+
+</body>
+</html>
